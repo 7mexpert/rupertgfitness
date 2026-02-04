@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RupertG Fitness - Download App</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header */
+        .app-header {
+            margin-bottom: 30px;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            animation: pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .app-subtitle {
+            color: #718096;
+            font-size: 16px;
+        }
+
+        /* Features */
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-text {
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #e2e8f0;
+        }
+
+        .download-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .download-info {
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-icon {
+            font-size: 20px;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            color: #718096;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .feature-item {
+                padding: 12px;
+            }
+            
+            .feature-text {
+                font-size: 14px;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #f0fff4;
+            border: 2px solid #48bb78;
+            color: #2f855a;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-weight: 600;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ffffff;
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <div class="app-icon">
+                <img src="/assets/favicon.png" alt="RupertG Fitness">
+            </div>
+            <h1 class="app-title">RupertG Fitness</h1>
+            <p class="app-subtitle">Your Personal Fitness Companion</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-text">Custom workout plans</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">Progress tracking & analytics</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📅</div>
+                <div class="feature-text">Monthly calendar with progress rings</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔥</div>
+                <div class="feature-text">Streak tracking & motivation</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <div class="feature-text">Beautiful mobile-first design</div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h3 class="download-title">Download RupertG Fitness</h3>
+            <p class="download-info">
+                Get the full app experience on your Android device. Track your workouts, monitor your progress, and stay motivated with our beautiful mobile app.
+            </p>
+            
+            <button class="download-btn" id="download-btn">
+                <span class="loading-spinner" id="loading-spinner"></span>
+                <span class="download-icon">⬇️</span>
+                Download APK (6.35 MB)
+            </button>
+            
+            <div class="success-message" id="success-message">
+                Download started! 🎉 Check your downloads folder.
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Compatible with Android 8.0 and above</p>
+            <p style="margin-top: 10px; font-size: 11px; opacity: 0.8;">
+                For security, please ensure "Unknown Sources" is enabled in your Android settings before installing.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadBtn = document.getElementById('download-btn');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const successMessage = document.getElementById('success-message');
+
+            downloadBtn.addEventListener('click', () => {
+                // Show loading state
+                downloadBtn.disabled = true;
+                downloadBtn.innerHTML = '<span class="loading-spinner" style="display: inline-block;"></span><span class="download-icon">⬇️</span>Downloading...';
+                
+                // Simulate download delay
+                setTimeout(() => {
+                    // Create download link
+                    const link = document.createElement('a');
+                    link.href = '/assets/rupertgfitness.apk';
+                    link.download = 'RupertG_Fitness.apk';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    downloadBtn.innerHTML = '<span class="download-icon">⬇️</span>Download APK (6.35 MB)';
+                    downloadBtn.disabled = false;
+
+                    // Hide success message after 3 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
