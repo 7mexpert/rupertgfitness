@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RupertG Fitness</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Onboarding Screen -->
+        <div id="onboarding-screen" class="screen active">
+            <div class="onboarding-container">
+                <div class="onboarding-header">
+                    <h1>Welcome to RupertG Fitness</h1>
+                    <p>Let's set up your daily workout routine</p>
+                </div>
+                
+                <div class="onboarding-step" id="step-1">
+                    <h2>Select Your Exercises</h2>
+                    <div class="exercise-grid" id="exercise-grid">
+                        <!-- Exercise cards will be generated here -->
+                    </div>
+                    <button class="btn-primary" id="continue-to-step-2">Continue</button>
+                </div>
+
+                <div class="onboarding-step hidden" id="step-2">
+                    <h2>Set Your Daily Goals</h2>
+                    <div class="goals-container" id="goals-container">
+                        <!-- Goal inputs will be generated here -->
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn-secondary" id="back-to-step-1">Back</button>
+                        <button class="btn-primary" id="continue-to-step-3">Continue</button>
+                    </div>
+                </div>
+
+                <div class="onboarding-step hidden" id="step-3">
+                    <h2>Almost Done!</h2>
+                    <div class="name-input-container">
+                        <label for="user-name">What's your first name?</label>
+                        <input type="text" id="user-name" placeholder="Enter your name">
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn-secondary" id="back-to-step-2">Back</button>
+                        <button class="btn-primary" id="start-fitness-journey">Start My Fitness Journey</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App Screen -->
+        <div id="main-screen" class="screen hidden">
+            <div class="main-container">
+                <header class="app-header">
+                    <div class="user-info">
+                        <h1 id="welcome-name">Hello!</h1>
+                        <p class="today-date" id="today-date"></p>
+                    </div>
+                    <button class="btn-secondary" id="reset-onboarding">Reset Setup</button>
+                </header>
+
+                <div class="exercises-container">
+                    <h2 class="section-title">Today's Workout</h2>
+                    <div class="exercises-list" id="exercises-list">
+                        <!-- Exercise items will be generated here -->
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <h3 class="section-title">Monthly Progress</h3>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Calendar days will be generated here -->
+                    </div>
+                </div>
+
+                <div class="progress-summary">
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-label">Completed</span>
+                            <span class="stat-value" id="completed-count">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Total</span>
+                            <span class="stat-value" id="total-count">0</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0%</span>
+                    </div>
+                </div>
+
+                <div class="daily-stats">
+                    <h3>Streak</h3>
+                    <div class="streak-container">
+                        <span class="streak-number" id="streak-count">0</span>
+                        <span class="streak-label">days</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
